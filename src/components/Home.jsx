@@ -22,7 +22,7 @@ const Register = ({ signUp, setSignUp }) => {
   const [message, setMessage] = useState("");
   const handleClick = async (data) => {
     const response = await axios.post(
-      "http://localhost:4000/auth/register",
+      "https://todo-app-backend-fi9d.onrender.com/auth/register",
       data
     );
     setMessage(response.data.message);
@@ -47,7 +47,7 @@ const Login = ({ signUp, setSignUp }) => {
   const handleClick = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/auth/login",
+        "https://todo-app-backend-fi9d.onrender.com/auth/login",
         data
       );
 

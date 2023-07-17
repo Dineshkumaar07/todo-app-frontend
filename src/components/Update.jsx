@@ -22,7 +22,7 @@ const Update = ({ updateTask, setUpdateTask, currentTask, index,getTasks }) => {
           className="bg-purple-600 text-white sm:px-2 px-1 py-1 rounded-md font-bold"
           onClick={(event) => {
             event.preventDefault();
-            axios.put("http://localhost:4000/task/update", {userId,index,updatedTask:task}).then(()=>{getTasks()})
+            axios.put("https://todo-app-backend-fi9d.onrender.com/task/update", {userId,index,updatedTask:task}).then(()=>{getTasks()})
             
             setUpdateTask(!updateTask);
           }}

@@ -14,14 +14,14 @@ const Form = () => {
 
   const deleteTask = (index) => {
     axios
-      .put(`http://localhost:4000/task/delete`, {userId, index})
+      .put(`https://todo-app-backend-fi9d.onrender.com/task/delete`, {userId, index})
       .then(() => getTasks())
       .catch(() => console.log("Failed"));
   };
 
   const addTask = (task) => {
      axios
-      .put(`http://localhost:4000/task/`, { userId, task })
+      .put(`https://todo-app-backend-fi9d.onrender.com/task/`, { userId, task })
       .then(() => {
         getTasks()
       })
@@ -35,7 +35,7 @@ const Form = () => {
 
   const getTasks = async () => {
     try {
-      const tasks = await axios.get(`http://localhost:4000/task/${userId}`);
+      const tasks = await axios.get(`https://todo-app-backend-fi9d.onrender.com/${userId}`);
       setTaskList(tasks.data);
       
     } catch (error) {
