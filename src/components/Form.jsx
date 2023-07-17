@@ -35,7 +35,7 @@ const Form = () => {
 
   const getTasks = async () => {
     try {
-      const tasks = await axios.get(`https://todo-app-backend-fi9d.onrender.com/${userId}`);
+      const tasks = await axios.get(`https://todo-app-backend-fi9d.onrender.com/task/${userId}`);
       setTaskList(tasks.data);
       
     } catch (error) {
@@ -44,7 +44,7 @@ const Form = () => {
   };
   useEffect(() => {
     getTasks();
-  }, []);
+  });
   return (
     <div className="w-full  flex justify-center p-4 ">
       <div className="sm:w-1/2 w-full flex flex-col ">
